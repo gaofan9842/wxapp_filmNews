@@ -1,0 +1,52 @@
+<view class="container">
+    <block>
+    <!-- fd: film detail -->
+        <view class="fd-hd">
+            <view class="fd-hd-bg" style="background-image: url({{picURL}})"></view>
+            <image src="{{picURL}}" class="fd-cover"></image>
+            <view class="fd-intro">
+                <view class="fd-title">{{name}}</view>
+                <!-- <view class="fd-intro-txt">{{answer2[0].also_known_as}}</view> -->
+                <view class="fd-intro-txt">豆瓣评分：
+                    <block wx:if="{{score==null||score==''||score==0||score=='暂无评分'}}">暂无</block>
+                    <block wx:else>
+                        <view class="fd-ratingNum">{{score}}</view>
+                    </block>
+                </view>
+                <view class="fd-intro-txt">分类:
+                   <block wx:if="{{tag==null||tag==''}}">未知</block>
+                   <block wx:else>{{tag}}</block>
+                </view>
+                <view class="fd-intro-txt">时长:
+                  <block wx:if="{{time==null||time==''}}">未知</block>
+                   <block wx:else>{{time}}</block>
+                </view>      
+                <view class="fd-intro-txt">上映年份：
+                <block wx:if="{{answer4[0][1]==null||answer4[0][1]==''}}">未知</block>
+                   <block wx:else>{{answer4[0][1]}}</block>
+                </view>
+            </view>
+            <view class="fd-favorite {{ collectFlag==1?'fd-favorite-active':''}}" data-id='1' bindtap="favoriteFilm"></view>
+        </view>
+        <view class="fd-bd">
+            <view class="fd-bd-title">剧情简介</view>
+            <view class="fd-bd-intro-null">
+                <block wx:if="{{answer4[0][0]==null||answer4[0][0]==''}}">暂无</block>
+                <block wx:else>
+                  <view class="fd-bd-intro">{{answer4[0][0]}}</view>
+                </block>
+            </view>
+            <view class="fd-bd-title">演职人员</view>
+        </view>
+        <scroll-view class="fd-bd-person" scroll-x="true">
+            <block wx:for="{{answer3}}">
+                <view class="fd-bd-person-item" data-id="{{filmDetailCastItem.id}}">
+                    <image class="fd-bd-person-avatar" mode='aspectFill' src="{{item[1]}}"></image>
+                    <view class="fd-bd-person-name">{{item[0]}}</view>
+                </view>
+            </block>
+        </scroll-view>
+
+
+    </block> 
+</view>

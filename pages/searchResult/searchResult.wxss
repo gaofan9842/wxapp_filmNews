@@ -1,0 +1,136 @@
+/* pages/searchResult/searchResult.wxss */
+@import "../../component/nullTip/nullTip.wxss";
+.film {
+    position: relative;
+    box-sizing: border-box;
+    width: 750rpx;
+    padding: 10rpx 15rpx;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20rpx;
+}
+
+.film-item {
+    position: relative;
+    width: 680rpx;
+    height: 310rpx;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 0rpx;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+    overflow: visible;
+    animation: fadeIn 1 s;
+}
+
+.film-cover, .film-cover-img {
+    width: 195rpx;
+    height: 270rpx;
+}
+
+.film-cover {
+    position: relative;
+    overflow: visible;
+}
+
+.file-intro {
+    padding: 0rpx 5rpx 16rpx 0rpx;
+    margin-top: -265rpx;
+    margin-left: 230rpx;
+}
+.cry{
+  width:250rpx;
+  height:250rpx; 
+   display:block;
+
+  
+}
+
+.image{
+  display:flex;
+ height: 400px;                    
+ justify-content: center;        
+ align-items:center;           
+}
+
+.td {
+  display: flex;
+  margin-top: -200rpx;
+  color: #aaa;
+  align-items: center;
+  justify-content: center;
+}
+
+.film-title {
+  font-size: 42rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.film-rating {
+  font-size: 31rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(119, 119, 119);
+  line-height: 50rpx;
+  margin-top: 10rpx;
+}
+
+.film-ratingNum {
+  font-size: 40rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(253, 163, 46);
+  line-height: 50rpx;
+  margin-top: -48rpx;
+  margin-left: 150rpx;
+}
+
+.film-actors {
+  font-size: 31rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(119, 119, 119);
+  line-height: 50rpx;
+}
+
+.film-showing {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgb(150, 150, 150);
+  line-height: 60rpx;
+  margin-top: 10rpx;
+}
+
+.film-tag {
+    width: 100%;
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.film-tag-item {
+    padding: 4rpx 6rpx;
+    margin-right: 10rpx;
+    font-size: 24rpx;
+    box-shadow: 0 0 0 1px #ccc;
+    border-top: 1px solid #fff;
+    border-radius: 10rpx;
+    background-color: #fafafa;
+    color: #666;
+}
+.loading-tip {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #ccc;
+    font-size: 28rpx;
+}

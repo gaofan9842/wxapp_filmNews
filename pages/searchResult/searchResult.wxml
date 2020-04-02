@@ -1,0 +1,44 @@
+
+    <view class="film">
+        <block wx:for="{{films}}" wx:for-index="filmIndex" wx:for-item="filmItem" wx:key="film">
+            <view data-name="{{filmItem[1]}}" data-pic="{{filmItem[0]}}" data-tag="{{filmItem[3]}}" data-score="{{filmItem[2]}}" data-time="{{filmItem[4]}}" data-maoyanid="{{filmItem[5]}}" class="film-item" catchtap="viewFilmDetail">
+                <view class="film-cover">
+                    <image class="film-cover-img" src="{{filmItem[0]}}"></image>
+                </view>
+                <view class="file-intro">
+                    <view class="film-title">{{filmItem[1]}}</view>
+
+                    <view class="film-rating">
+                       
+                            豆瓣评分:
+                             <block wx:if="{{filmItem[2]==null||filmItem[2]==''||filmItem[2]==0||filmItem[2]=='暂无评分'}}">暂无</block>
+                           <block wx:else>
+
+                            <view class="film-ratingNum">{{filmItem[2]+"\n"}}</view>
+                        </block>
+                    </view>
+                 
+                    <view class="film-actors">上映时间:
+                      <block wx:if="{{filmItem[4]==null||filmItem[4]==''}}">暂无</block>
+                           <block wx:else>{{filmItem[4]}}</block>
+                    </view>
+                    <view class="film-actors">类型:
+                     <block wx:if="{{filmItem[3]==null||filmItem[3]==''}}">暂无</block>
+                           <block wx:else>{{filmItem[3]}}</block>
+                    </view>
+
+                </view>
+                </view>
+                </block>
+            </view>  
+
+<block wx:if="{{hasMore&&showLoading}}">
+    <view class="loading-tip">拼命加载中…</view>
+</block>
+<block wx:if="{{!hasMore}}">
+ <view class='image'>
+  <image class="cry" src="../../images/not_find.png" ></image>
+  </view>
+  <view class="td">没有找到结果</view>
+
+</block>

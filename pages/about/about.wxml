@@ -1,0 +1,10 @@
+<!--pages/about/about.wxml-->
+
+<text class='title'>作者：</text>
+<text class='subtitle'>田承霖、高燔、侯雨茜、吴一汶</text>
+
+<text class='title'>后端支持：</text>
+<text class='subtitle'>豆瓣API：https://douban.uieee.com/v2/movie/\nin_theaters?city=天津\n猫眼电影数据支持：https://maoyan.com/</text>
+
+
+<!-- </view> -->

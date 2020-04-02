@@ -1,0 +1,82 @@
+<!--pages/favorite/favorite.wxml-->
+<import src="../../component/nullTip/nullTip.wxml"/>
+<import src="../../component/filmList/filmList.wxml"/>
+
+<view class="tabbar">
+<view class="tab-item {{show == 'films' ? 'tab-active' : ''}}" data-type="films" bindtap="changeViewType">电影</view>
+<view class="tab-item {{show == 'cinema_favorite' ? 'tab-active' : ''}}" data-type="cinema_favorite" bindtap="changeViewType">影院</view>
+</view>
+
+
+<view hidden="{{show == 'films' ? false : true}}">
+<block wx:if="{{films.length == 1}}">
+<template is="nullTip" data="{{nullTip: nullTip}}"/>
+</block>
+<block wx:else>
+
+    <view class="film" bindtap="viewFilmDetail">
+        <block wx:for="{{currentID}}" wx:for-index="filmIndex"  wx:key="film">
+            <view class="film-item"  data-name="{{films[filmIndex+1].nameArr}}" data-pic="{{films[filmIndex+1].picArr}}" data-score="{{films[filmIndex+1].scoreArr}}" data-tag="{{films[filmIndex+1].tagArr}}" data-time="{{films[filmIndex+1].timeArr}}" data-movieid="{{films[filmIndex+1].movieidArr}}" catchtap="viewFilmDetail">
+                <view class="film-cover">
+                    <image class="film-cover-img" src="{{films[filmIndex+1].picArr}}"></image>
+                </view>
+                <view class="file-intro">
+                    <view class="film-title">{{films[filmIndex+1].nameArr}}</view>
+                    <view class="film-rating">豆瓣评分:</view>
+                    <view class="film-ratingNum">{{films[filmIndex+1].scoreArr+"\n"}}</view>
+                    <view class="film-actors">主演：{{films[filmIndex+1].actorsArr}}</view>
+                    <view class="film-actors">时长：{{films[filmIndex+1].timeArr}}</view>
+                    <view class="film-actors">类型：{{films[filmIndex+1].tagArr}}</view>
+
+                    <!-- <view class="film-showing">今天 {{}} 家影院放映 {{}} 场</view> -->
+                </view>
+            </view>
+        </block>
+       
+    </view>
+
+</block>
+</view>
+
+
+<view  hidden="{{show == 'cinema_favorite' ? false : true}}">
+<block wx:if="{{cinema_favorite.length == 0}}">
+<template is="nullTip" data="{{nullTip: nullTip}}"/>
+</block>
+
+
+<block wx:else>
+<view class="white"></view>
+<scroll-view class="scroll-view-y" scroll-y>
+  <block wx:for="{{currentIDCinema}}"  wx:for-index="cinemaIndex">
+    <view class="first_page {{curNav == 1 ? 'active' : ''}}"
+          bindtap="interSecondTab" data-name="{{cinema_favorite[cinemaIndex].nameArr}}" data-address="{{cinema_favorite[cinemaIndex].addressArr}}" data-tel="{{cinema_favorite[cinemaIndex].telArr}}" data-threed="{{cinema_favorite[cinemaIndex].threedArr}}" data-child="{{cinema_favorite[cinemaIndex].childArr}}" data-park="{{cinema_favorite[cinemaIndex].parkArr}}" data-detailurl="{{cinema_favorite[cinemaIndex].detailurlArr}}">
+      
+        <view class="name_zone">
+        <text class="cinema_name">{{ cinema_favorite[cinemaIndex].nameArr}}</text>
+        </view>
+        <view class="DivLine"></view>
+        <view class="address_zone">
+        <text class="sec_cinema_service0">地址</text>
+        <text decode="true">&nbsp; &nbsp;</text>
+        <text class="cinema_address">{{ cinema_favorite[cinemaIndex].addressArr}}</text>
+        </view>
+        <view class="phone_zone">
+        <text class="sec_cinema_service0">电话</text>
+        <text decode="true">&nbsp; &nbsp;</text>
+        <text class="cinema_phone">{{cinema_favorite[cinemaIndex].telArr}}</text>
+        </view>
+        <view class="frey">
+          <view class="DivLine"></view>
+          <view class="divLine"></view>
+        </view>
+    </view>
+  </block>
+  </scroll-view>
+
+
+
+
+
+</block>
+</view>

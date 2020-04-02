@@ -1,0 +1,11 @@
+
+<import src="../../component/filmList/filmList.wxml"/>
+<template is="filmList" data="{{films: films, hasMore: hasMore}}"/>
+        <!--下滑加载更多数据-->
+        <block wx:if="{{hasMore}}">
+            <view class="loading-tip">拼命加载中…</view>
+        </block>
+        <block wx:else>
+            <view class="loading-tip">已经到底线了哦</view>
+        </block>
+

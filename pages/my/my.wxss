@@ -1,0 +1,62 @@
+.margin1{
+background-color: #e2feff;
+border: 0px solid;
+border-color: #e2feff;
+margin:0px;
+text-align: center;
+/* height:14ch */
+height: 25%;
+}
+.marginAll{
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+height: 50%;
+
+}
+.margin2{
+background-color: #fff;
+border: 1px solid;
+box-sizing: border-box;
+border-color: #fff;
+margin-right:-1px;
+margin-bottom:-1px;
+text-align: bottom;
+/* height:18ch; */
+width:50%;
+}
+.img {
+  display: flex;
+  width: 160rpx;
+  height: 160rpx;
+  margin: auto;
+}
+.text{
+  display: flex;
+  color:#aaa;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+    
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+page{
+  height: 100%;
+}

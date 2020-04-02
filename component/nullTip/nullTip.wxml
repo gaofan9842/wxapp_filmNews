@@ -1,0 +1,10 @@
+<!--component/nullTip/nullTip.wxml-->
+<template name="nullTip">
+    <view class="null-tip">{{nullTip.tipText}}</view>
+    <block wx:if="{{nullTip.routeUrl == undefined}}">
+        <view bindtap="{{nullTip.fn}}" class="null-action">{{nullTip.actionText}}</view>
+    </block>
+    <block wx:else>
+        <navigator url="{{nullTip.routeUrl}}" open-type="switchTab" class="null-action">{{nullTip.actionText}}</navigator>
+    </block>
+</template>

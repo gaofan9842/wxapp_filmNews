@@ -1,0 +1,26 @@
+<!--component/cinemaList/cinemaList.wxml-->
+<template name="cinemaList">
+
+
+    <!-- <block wx:for="{{answer}}">
+        <view class="first_page {{curNav == 1 ? 'active' : ''}}" bindtap="interSecondTab" catchtap="viewCinemaDetail" data-id="{{item.cinemaName}}">
+            <text class="cinema_name">{{}}</text>
+            <text>\n</text>
+            <text class="cinema_address">{{}}</text>
+            <text>\n</text>
+            <text class="cinema_phone">{{}}</text>
+            <text>\n</text>
+            <text class="cinema_route">{{}}</text>
+        </view>
+    </block> -->
+
+    <block wx:for="{{answer4}}">
+        <view class="first_page {{curNav == 1 ? 'active' : ''}}" catchtap="viewCinemaDetail" data-id="{{item.cinemaName}}"  data-name="{{item[0]}}" data-url="{{item[1]}}" data-address="{{item[2]}}" >
+            <text class="cinema_name">{{item[0]}}</text>
+            <text>\n</text>
+            <text class="cinema_address">{{item[2]}}</text>
+            <text>\n</text>
+        </view>
+    </block>
+
+</template>

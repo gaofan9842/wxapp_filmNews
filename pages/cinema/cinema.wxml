@@ -1,0 +1,116 @@
+
+<view class='page_row' bindtap="suo">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search' ></icon>  
+          <input  placeholder="请输入关键字" value="{{searchValue}}" bindinput="getinput"/>  
+        </view>  
+      </view> 
+      <view class="btn"> 
+      <button class='sousuo' bindtap="interResult" >搜索</button>
+      </view>
+    </view>
+<view class="DivLine"></view>
+
+
+
+<view class="container">
+
+
+  <!-- 左侧栏 -->
+  
+  <view class='nav_left'>
+    <scroll-view class="scroll-view-y" scroll-y style="height:{{leftright}}rpx">
+
+    <view class="nav_left_items {{curNav == 1 ? 'active' : ''}}" 
+          bindtap="switchRightTab"  data-id="1">
+      全部
+    </view>
+
+    <view class="nav_left_items {{curNav == 2 ? 'active' : ''}}" 
+          bindtap="switchRightTab"  data-id="2">
+      西青区
+    </view>
+
+    <view class="nav_left_items {{curNav == 3 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="3">
+      滨海新区
+    </view>
+
+    <view class="nav_left_items {{curNav == 4 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="4">
+      和平区
+    </view>
+    <view class="nav_left_items {{curNav == 5 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="5">
+      河西区
+    </view>
+    <view class="nav_left_items {{curNav == 6 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="6">
+      河东区
+    </view>
+    <view class="nav_left_items {{curNav == 7 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="7">
+      津南区
+    </view>
+    <view class="nav_left_items {{curNav == 8 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="8">
+      静海区
+    </view>
+    <view class="nav_left_items {{curNav == 9 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="9">
+      南开区
+    </view>
+    <view class="nav_left_items {{curNav == 10 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="10">
+      武清区
+    </view>
+    <view class="nav_left_items {{curNav == 11 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="11">
+      东丽区
+    </view>
+    <view class="nav_left_items {{curNav == 12 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="12">
+      宝坻区
+    </view>
+    <view class="nav_left_items {{curNav == 13 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="13">
+      北辰区
+    </view>
+    <view class="nav_left_items {{curNav == 14 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="14">
+      蓟州区
+    </view>
+    <view class="nav_left_items {{curNav == 15 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="15">
+      河北区
+    </view>
+    <view class="nav_left_items {{curNav == 16 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="16">
+      宁河区
+    </view>
+    </scroll-view>
+  </view>
+  
+  
+  
+  
+  <view class="nav_right">
+  <scroll-view class="scroll-view-y" scroll-y style="height:{{leftright}}rpx">
+
+  <block wx:for="{{answer}}">
+    <view class="first_page {{curNav == 1 ? 'active' : ''}}"
+          bindtap="interSecondTab" data-id="{{item.cinemaName}}"    data-cinemaaddress="{{item[1]}}"  data-cinemaTel="{{item[2]}}"    data-threeD="{{item[3]}}"  data-child=" {{item[4]}}" data-park="{{item[5]}}" data-cinemaName="{{item[0]}}" data-detailUrl="{{item[6]}}">
+        <text class="cinema_name">{{item[0]}}</text>
+        <text>\n</text>
+        <image class="address_image" src="../../images/location-active.png"></image>
+        <text class="cinema_address">{{item[1]}}</text>
+        <text>\n</text>
+        <image class="address_image" src="../../images/dianhuahaoma.png"></image>
+        <text class="cinema_phone">{{item[2]}}</text>
+    </view>
+  </block>
+    </scroll-view>
+  </view>
+</view>
+    

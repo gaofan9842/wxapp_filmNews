@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/movie/movie",
+    "pages/my/my",
+    "pages/about/about",
+    "pages/best/best",
+    "pages/cinema/cinema",
+    "pages/shake/shake",
+    "pages/favorite/favorite",
+    "pages/favoriteFilm/favoriteFilm",
+    "pages/sec_cinema/sec_cinema",
+    "pages/filmDetail/filmDetail",
+    "pages/searchResult/searchResult",
+    "pages/sousuoresult/sousuoresult",
+    "pages/searchPage/searchPage",
+    "pages/filmDetail2/filmDetail2",
+    "pages/cinemaDetail/cinemaDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#f59a23",
+    "boderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/movie/movie",
+        "iconPath": "images/movie_unselected.png",
+        "selectedIconPath": "images/movie_selected.png",
+        "text": "电影"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "iconPath": "images/cinema_unselected.png",
+        "selectedIconPath": "images/cinema_selected.png",
+        "text": "影院"
+      },
+      {
+        "pagePath": "pages/best/best",
+        "iconPath": "images/best_unselected.png",
+        "selectedIconPath": "images/best_selected.png",
+        "text": "口碑"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my_unselected.png",
+        "selectedIconPath": "images/my_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "sitemapLocation": "sitemap.json"
+}

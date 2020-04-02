@@ -1,0 +1,21 @@
+/* component/cinemaList/cinemaList.wxss */
+.first_page{
+  position: relative;
+  width: 90%;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cinema_name{
+  font-size: 35rpx;
+}
+.cinema_address{
+  margin-top: 50rpx;
+  color: rgb(119, 119, 119);
+  line-height: 45rpx;
+  font-size: 28rpx;
+}

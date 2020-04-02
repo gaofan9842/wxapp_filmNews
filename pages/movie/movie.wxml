@@ -1,0 +1,36 @@
+<view class='page_row' bindtap="suo">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search' ></icon>  
+          <input  placeholder="请输入关键字" value="{{searchValue}}" bindinput="getinput"/>  
+        </view>  
+      </view> 
+      <view class="btn"> 
+      <button class='sousuo' bindtap="interResult" >搜索</button>
+      </view>
+    </view>
+    <view class="DivLine"></view>
+
+<!-- <block wx:if="{{! showLoading}}"> -->
+<!-- <block wx:if="{{showLoading}}">
+    <view class="loading">玩命加载中…</view>
+</block>
+<block wx:else> -->
+
+<!-- <view class="search-bar">
+    <input class="search-txt" placeholder-class="search-txt-plc" bindfocus="viewSearch" placeholder="找电影" type="text"/>
+</view> -->
+<!-- </block> -->
+
+<import src="../../component/filmList/filmList.wxml"/>
+<template is="filmList" data="{{films: films, hasMore: hasMore}}"/>
+
+<!--下滑加载更多数据-->
+<block wx:if="{{hasMore}}">
+    <view class="loading-tip">拼命加载中…</view>
+</block>
+<block wx:else>
+    <view class="loading-tip">已经到底线了哦</view>
+</block>
+<!-- <import src="../../component/message/message.wxml"/>
+<template is="message" data="{{message: message}}"/> -->

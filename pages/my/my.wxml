@@ -1,0 +1,30 @@
+
+<block>
+<view class='margin1'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+
+  </view>
+</view>
+</block>
+<view class='marginAll'>
+<view class='margin2' bindtap="shakeArea">
+<image src="../../images/shake.png" class="img"></image>
+<text class="text">摇一摇</text></view>
+<view class='margin2' bindtap="favoriteArea"> 
+<image src="../../images/uncollected.png" class="img"></image>
+<text class="text">收藏</text></view>
+<view class='margin2' bindtap="aboutArea"> 
+<image src="../../images/about.png" class="img"></image>
+<text class="text">关于</text></view>
+
+</view>
+
+
+
+
+

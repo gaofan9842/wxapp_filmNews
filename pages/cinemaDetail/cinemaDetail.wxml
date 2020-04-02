@@ -1,0 +1,100 @@
+<view class="cin_name">
+  <view class="search">
+    <text class="sec_cinema_name">{{cinemaName}}</text>
+  </view>
+<!-- <view class="fd-favorite {{isFilmFavorite ? 'fd-favorite-active' : ''}}" bindtap="favoriteFilm">收藏</view> -->
+    
+</view>
+
+<view class="frey1">
+<view class="DivLine1"></view>
+<view class="divLine"></view>
+</view>
+
+<view class="cin_address">
+<text class="sec_cinema_address">{{cinemaAddress}}</text>
+</view>
+
+<view class="DivLine"></view>
+<view class="cin_address">
+<text class="sec_cinema_phone">{{answer1[0]}}</text>
+</view>
+
+<view class="frey">
+<view class="DivLine"></view>
+<view class="divLine"></view>
+</view>
+
+<view class="cin_ser">
+<text class="sec_cinema_service">影院服务</text>
+</view>
+
+<view class="DivLine"></view>
+<view class="sec_cin_add">
+<text class="sec_cinema_service0">3D眼镜</text>
+<text decode="true">&nbsp; &nbsp;</text>
+<text class="sec_cinema_service00">{{answer1[1]}}</text>
+</view>
+<view class="DivLine"></view>
+<view class="sec_cin_add">
+<text class="sec_cinema_service1">儿童优惠</text>
+<text decode="true">&nbsp; &nbsp;</text>
+<text class="sec_cinema_service10">{{answer1[2]}}</text>
+</view>
+<view class="DivLine"></view>
+<view class="sec_cin_add">
+<text class="sec_cinema_service2">可停车</text>
+<text decode="true">&nbsp; &nbsp;</text>
+<text class="sec_cinema_service20">{{answer1[3]}}</text>
+</view>
+<view class="frey">
+<view class="DivLine"></view>
+<view class="divLine"></view>
+</view>
+
+
+
+<view class="movie_background">
+  <scroll-view scroll-x="true">
+    <view class="uploadWrap" scroll-x="true">
+      <block wx:for="{{answer}}" wx:for-index="idx">
+        <view class="upload_Item">
+          <image class="{{ item[1]==curNav  ? 'upload_Item_img_da' : 'upload_Item_img'}}" data-tcl="{{idx}}" data-id="{{item[1]}}" src="{{item[0]}}" bindtap="turn_big">     </image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class="frey">
+<view class="DivLine1"></view>
+<view class="divLine"></view>
+</view>
+
+<view wx:if="{{idy==1}}">
+  <view class="movie_info" >
+    <view class="big_two">
+      <text class="mov_name">{{answer[tcl][1]}}</text>
+      <text decode="true">&nbsp; &nbsp;</text>
+      <text class="score">{{answer[tcl][2]}}</text>
+    </view>
+    <view class="exa-info">
+    <view class="three-info">
+    <text class="time">时长:</text>
+    <text decode="true">&nbsp; &nbsp;</text>
+    <text class="time_length">{{answer[tcl][3]}}</text>
+    <text>\n</text>
+    <text class="type">类型:</text>
+    <text decode="true">&nbsp; &nbsp;</text>
+    <text class="type_dis">{{answer[tcl][4]}}</text>
+    <text>\n</text>
+    <text class="actor">主演:</text>
+    <text decode="true">&nbsp; &nbsp;</text>
+    <text class="actor_total">{{answer[tcl][5]}}</text>
+    </view>
+    <!-- <view class="btn1">
+    <button class="filmdetail" bindtap="interFilmDetail">详情</button>
+    </view> -->
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,42 @@
+<!--pages/sousuoresult/sousuoresult.wxml-->
+<view wx:if="{{id==0}}">
+ <scroll-view class="scroll-view-y" scroll-y>
+  <block wx:for="{{answer}}">
+    <view class="first_page {{curNav == 1 ? 'active' : ''}}"
+          bindtap="interSecondTab" data-cinemaname="{{item[0]}}" data-cinemaaddress="{{item[1]}}" data-cinematel="{{item[2]}}" data-threed="{{item[3]}}" data-child="{{item[4]}}" data-park="{{item[5]}}" data-detailurl="{{item[6]}}">
+          <view class="name_zone">
+        <text class="cinema_name">{{item[0]}}</text>
+        </view>
+        <view class="DivLine"></view>
+        <view class="address_zone">
+        <text class="sec_cinema_service0">地址</text>
+        <text decode="true">&nbsp; &nbsp;</text>
+        <text class="cinema_address">{{item[1]}}</text>
+        </view>
+        <!-- <view class="phone_zone">
+        <text class="sec_cinema_service0">电话</text>
+        <text decode="true">&nbsp; &nbsp;</text>
+        <text class="cinema_phone">{{item.telephone}}</text>
+        </view>
+        <view class="route_zone">
+        <text class="sec_cinema_service0">交通</text>
+        <text decode="true">&nbsp; &nbsp;</text>
+        <text class="cinema_route">{{item.trafficRoutes}}</text>
+        </view> -->
+        <view class="frey">
+          <view class="DivLine"></view>
+          <view class="divLine"></view>
+        </view>
+    </view>
+  </block>
+  </scroll-view>
+  </view>
+  <view wx:else>
+
+  <view class='image'>
+  <image class="cry" src="../../images/not_find.png" ></image>
+  </view>
+  <view class="td">没有找到结果
+  </view>
+  </view>
+  

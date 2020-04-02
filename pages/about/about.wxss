@@ -1,0 +1,22 @@
+/* pages/about/about.wxss */
+
+.title{
+  box-sizing: border-box;
+  padding: 50rpx;
+  height: 5rpx;
+  display: flex;
+  color:#000;
+  font-weight: bold;
+  font-size: 24px;
+  justify-content: left;
+
+}
+.subtitle{
+  display: flex;
+  height:20rpx;
+  font-size: 18px;
+  color:#aaa;
+  box-sizing: border-box;
+  padding: 50rpx;
+  justify-content: left;
+}
